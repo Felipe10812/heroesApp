@@ -10,8 +10,7 @@ import { HeroesComponent } from './pages/heroe/heroe.component';
 import { HeroesRoutingModule } from './heroesRouting.module';
 import { MaterialModule } from '../material/material.module';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
-
-
+import { imagenPipe } from './pipes/imagen.pipe';
 
 @NgModule({
   declarations: [
@@ -20,12 +19,15 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
     HeroesComponent,
     HomeComponent,
     ListadoComponent,
+    HeroeTarjetaComponent,
+    imagenPipe, 
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
     HeroesRoutingModule,
     MaterialModule,
+    
   ]
 })
 export class HeroesModule { }

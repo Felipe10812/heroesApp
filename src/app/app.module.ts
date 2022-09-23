@@ -8,13 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HeroeTarjetaComponent } from './heroes/components/heroe-tarjeta/heroe-tarjeta.component';
+import { HeroesModule } from './heroes/heroes.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    HeroeTarjetaComponent,
   ],
   imports: [
     BrowserModule,
