@@ -7,34 +7,42 @@
 <ng-template #divHeroe>
     <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
 
-        <div fxFlex="50" > 
-            <h1 >{{ heroe.superhero}} <small>- {{heroe.alter_ego}} </small> </h1>
+        <div fxFlex="50">
+            <h1>{{ heroe.superhero}} <small>- {{heroe.alter_ego}} </small> </h1>
             <mat-divider></mat-divider>
             <br>
-            <div class="thumb">
+            <div class="thumb cat">
                 <a href="#">
-                    <img [src]="heroe | imagen">
+                    <img class="img" [src]="heroe | imagen">
                 </a>
             </div>
         </div>
 
-        <div fxFlex="50">
+        <div fxFlex="50" >
             <h1> {{heroe.publisher}}</h1>
             <mat-divider></mat-divider>
 
-            <mat-list>
-                <mat-list-item> {{ heroe.first_appearance }} </mat-list-item>
-                <mat-list-item> {{ heroe.alter_ego }} </mat-list-item>
-                <mat-list-item> {{ heroe.characters }} </mat-list-item>
-                <mat-list-item> {{ heroe.publisher }} </mat-list-item>
-            </mat-list>
-            <br>
+            <div class="card thumb">
+                <div class="imgBx">
+                    <img
+                        src="http://cdn.shopify.com/s/files/1/0064/6679/7632/products/2_48101583-8908-4ff6-9636-44a5f075eeef_1024x.png?v=1617035605">
+                </div>
+                <div class="details">
+                    <mat-list>
+                        <mat-list-item> {{ heroe.first_appearance }} </mat-list-item>
+                        <mat-list-item> {{ heroe.alter_ego }} </mat-list-item>
+                        <mat-list-item> {{ heroe.characters }} </mat-list-item>
+                        <mat-list-item> {{ heroe.publisher }} </mat-list-item>
+                    </mat-list>
+                </div>
+            </div>
 
+            <mat-divider></mat-divider>
+            <br>
             <button mat-button color="warn" (click)="regresar()">
-                Regresar 
+                Regresar
             </button>
 
         </div>
-
     </div>
 </ng-template>
