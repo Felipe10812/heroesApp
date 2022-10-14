@@ -9,11 +9,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { ConfirmarComponent } from './heroes/components/confirmar/confirmar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
+    ConfirmarComponent,
   ],
   imports: [
     BrowserModule,
