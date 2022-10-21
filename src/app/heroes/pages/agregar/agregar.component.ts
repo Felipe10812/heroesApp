@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Heroe, Publisher } from '../../interfaces/heroes.interface';
 import { HeroesService } from '../../services/heroes.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs';
+import { switchMap, throwIfEmpty } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Dialog } from '@angular/cdk/dialog';
 import { ConfirmarComponent } from '../../components/confirmar/confirmar.component';
@@ -75,12 +75,14 @@ export class AgregarComponent implements OnInit {
   }
 
   borrarHeroe() {
-    this.dialog.open( ConfirmarComponent, { width: '500'} );
+    const dialog = this.dialog.open( ConfirmarComponent, { width: '500', data: this.heroe } );
+    dialog.afterClosed()
     //this.heroesService.borrarHeroe(this.heroe.id!).subscribe(resp => { this.router.navigate(['/heroes']) });
   }
 
   mostrarSnakbar(mensaje: string) {
     this.snackBar.open(mensaje, 'Cerrar', { duration: 2500 })
   }
+
 
 }
